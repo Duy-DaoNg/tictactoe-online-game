@@ -1,0 +1,253 @@
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+a:link {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	color: black;
+}
+
+body {
+	font-family: 'Public Sans', sans-serif;
+	background-color: #f5f5f5;
+	width: 100vw;
+	height: auto;
+	overflow-x: hidden;
+}
+.container {
+	width: 100%;
+	height: 100%;
+}
+.mobile {
+	display: none;
+}
+.mobile span {
+	color: #fff;
+	align-items: center;
+	cursor: pointer;
+}
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	height: calc(100% - 90px);
+}
+
+/* Popup */
+#popup {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    display: block;
+}
+/* LogIn */
+
+/* Cover */
+#cover {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	/* Add the blur effect to the cover element */
+	filter: blur(5px);
+	display: block;
+}
+/* SignUp*/
+
+.registration-form {
+	margin: 70px auto;
+	width: 424px;
+	display: grid;
+	grid-template-rows: auto auto;
+	flex-shrink: 0;
+	border-radius: 4px;
+	border: 1px solid #e4e7e9;
+	background: #fff;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+}
+.registration-form h2 {
+	text-align: center;
+	padding: 16px 0;
+	text-transform: uppercase;
+	font-family: Public Sans;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 28px;
+	box-shadow: 0 -1px #e4e7e9 inset;
+}
+.registration-form p {
+	padding: 20px 24px;
+	text-align: center;
+	color: #5f6c72;
+	font-size: 17px;
+}
+.registration-form p a {
+	color: #0a99e0;
+	font-weight: 600;
+	font-style: normal;
+    cursor: pointer;
+}
+.registration-form p a:hover {
+	color: #fa8232;
+}
+label {
+	display: block;
+}
+.inputItem {
+	width: 100%;
+	display: grid;
+	grid-template-rows: auto auto;
+	row-gap: 5px;
+}
+.inputItem label {
+	color: #191c1f;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px;
+}
+.inputItem input {
+	width: 100%;
+	padding: 12px 16px;
+	outline: none;
+	border-radius: 2px;
+	border: 1px solid #e4e7e9;
+	background: #fff;
+	font-size: 16px;
+}
+form {
+	padding: 24px 32px;
+	display: grid;
+	row-gap: 16px;
+	box-shadow: 0 -1px #e4e7e9 inset;
+}
+form button {
+	margin-top: 15px;
+	outline: none;
+	border: none;
+	padding: 15px 15px;
+	background-color: #fa8232;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+#reg-form{
+	display: none;
+}
+/* Login */
+.login-form {
+	margin: 70px auto;
+	width: 424px;
+	display: grid;
+	grid-template-rows: auto auto;
+	flex-shrink: 0;
+	border-radius: 4px;
+	border: 1px solid #e4e7e9;
+	background: #fff;
+	box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.12);
+}
+.login-form h2 {
+	text-align: center;
+	padding: 16px 0;
+	text-transform: uppercase;
+	font-family: Public Sans;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 28px;
+	box-shadow: 0 -1px #e4e7e9 inset;
+}
+.login-form p {
+	padding: 20px 24px;
+	text-align: center;
+	color: #5f6c72;
+	font-size: 17px;
+}
+.login-form p a {
+	color: #0a99e0;
+	font-weight: 600;
+	font-style: normal;
+	/* line-height: 12; */
+}
+.login-form p a:hover {
+	color: #fa8232;
+}
+
+/* Button */
+.btn {
+	border-radius: 8px;
+	border-style: none;
+	box-sizing: border-box;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 500;
+	height: 50px;
+	line-height: 20px;
+	list-style: none;
+	margin: 0;
+	outline: none;
+	padding: 10px 16px;
+	position: relative;
+	text-align: center;
+	text-decoration: none;
+	transition: color 100ms;
+	vertical-align: baseline;
+	user-select: none;
+	-webkit-user-select: none;
+	touch-action: manipulation;
+}
+/* Green */
+.gre {
+	background-color: #17cf97;
+}
+.gre:hover,
+.gre:focus {
+	background-color: #20e4a9;
+}
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		position: fixed;
+		top: 48px;
+		right: -300px;
+		width: 300px;
+		height: 100vh;
+		background: #2a3239;
+		box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+		padding: 30px 0 0 10px;
+		transition: 0.3s ease-in-out;
+	}
+	.navbar.active {
+		right: 0px;
+	}
+	.navbar li {
+		margin-bottom: 25px;
+	}
+	.mobile {
+		display: block;
+	}
+	.mobile i {
+		font-size: 24px;
+		cursor: pointer;
+	}
+}

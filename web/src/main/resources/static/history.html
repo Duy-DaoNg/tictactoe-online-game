@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/history.css">
+    <title>Match history</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="#" class="title">History Match Score</a>
+            <div class="reg">
+                <i style="display: block;" class="fa-solid fa-user"></i>
+                <ul class="signInUp">
+                    <li><a href="http://localhost:8080/play">Chơi Game</a></li>
+                    <li><a href="http://localhost:8080/login/logout">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="no-data" id="no-data"
+            style="margin: 200px auto;margin-bottom: 0; font-size: 32px;font-weight: 700;display: flex;justify-content: center;align-items: center;">
+            <p>Không có kết quả trận đấu nào diễn ra!</p>
+        </div>
+        <!-- !BODY -->
+        <div class="content" style="display: block;">
+            <h2 class="title-content">Match History</h2>
+            <div class="listMatch">
+                <div class="itemMatch">
+                    <div class="header-match">
+<!--                        <span>Champion Leaguage</span>-->
+                        <span>Success 1vs1 Match</span>
+                    </div>
+                    <div class="body-match">
+                        <div class="time-match">
+                            <span>Wed, November 23 10:30 AM</span>
+                            <span>Round 1</span>
+                        </div>
+                        <div class="result-match">
+                            <div class="home">
+                                <div class="image-team">
+                                    <img src="https://play-lh.googleusercontent.com/pnvqAY43TOKv4MR1tQHWdQtxPFp-L0aaxvAX32ftI9UB1BgqOnKOpHP1yM8EkcCQtAGA"
+                                        alt="" style="width: 100px;height: 100px;border-radius:50%; object-fit: cover;">
+                                </div>
+                                <div class="info-team">
+                                    <div class="name-team">Liverpool FC</div>
+                                    <div class="result-team">0-2</div>
+                                    <div class="number-team"><i class="fa-solid fa-user"></i> <span> 3</span></div>
+                                </div>
+                            </div>
+                            <div class="showMatch">
+                                <h1 style="text-align: center; margin-bottom: 5px;font-size: 40px;">VS</h1>
+                                <p><span class="B1">LOSS</span> 2 - 4 <span class="B2">WIN</span></p>
+                            </div>
+                            <div class="guest">
+                                <div class="info-team">
+                                    <div class="name-team">Liverpool FC</div>
+                                    <div class="result-team">0-2</div>
+                                    <div class="number-team"> <i class="fa-solid fa-user"></i> 3</div>
+                                </div>
+                                <div class="image-team">
+                                    <img src="https://play-lh.googleusercontent.com/pnvqAY43TOKv4MR1tQHWdQtxPFp-L0aaxvAX32ftI9UB1BgqOnKOpHP1yM8EkcCQtAGA"
+                                        alt="" style="width: 100px;height: 100px;border-radius:50%; object-fit: cover;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="end" style="width: 80%;height: 1px;background-color: transparent; margin: 0 auto;"></div>
+        </div>
+        <script src="js/history.js"></script>
+</body>
+
+</html>

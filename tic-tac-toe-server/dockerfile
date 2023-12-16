@@ -1,0 +1,17 @@
+# syntax=docker/dockerfile:1
+# Sử dụng base image hệ điều hành alpine để tiết kiệm dung lượng
+FROM openjdk:17-alpine
+
+# Tạo group spring và user spring
+RUN addgroup -S spring && adduser -S spring -G spring
+
+# Dùng user spring để khởi động ứng dụng Spring Boot sẽ an toàn hơn
+USER spring:spring
+
+# Đặt biến JAR_FILE là file có đuôi jar trong thư mục target
+ARG JAR_FILE=target/*.jar
+
+# Copy JAR_FILE vào docker image với tên file mới là app.jar
+COPY ${JAR_FILE} app.jar
+
+ENTRYPOINT ["java","-jar","/app.jar"]

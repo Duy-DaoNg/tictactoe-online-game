@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  web-game:
+    container_name: web-game
+    image: duydaong/web-game:latest
+    ports:
+      - 8080:8080
+    networks:
+      - ttt-network
+    depends_on:
+      - mysql-ttt
+
+  ttt-mqtt:
+    container_name: ttt-mqtt
+    image: duydaong/ttt-mqtt:latest
+    networks:
+      - ttt-network
+    depends_on:
+      - web-game
+    ports:
+      - 8883:8883
+
+  mysql-ttt:
+    container_name: mysql-ttt
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    ports:
+      - 3306:3306
+    networks:
+      - ttt-network
+    volumes:
+      - ./main.sql:/docker-entrypoint-initdb.d/main.sql
+
+networks:
+  ttt-network:

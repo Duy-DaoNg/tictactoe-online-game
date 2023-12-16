@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <div class=container>
+        <div id="cover"></div>
+        <div id="popup">
+            <div id="reg-form">
+                <div class="registration-form">
+                    <h2>Đăng ký tài khoản</h2>
+                    <!-- onsubmit="validateForm(e)" -->
+                    <form id="signupForm" action="" method="POST">
+                        <div class="inputItem">
+                            <label for="fullName">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+
+                        <div class="inputItem">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="inputItem">
+                            <label for="password">Mật khẩu:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+
+                        <div class="inputItem">
+                            <label for="confirmPassword">Nhắc lại mật khẩu:</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+
+                        <div class="checking" style="display: flex;align-items: center;">
+                            <input style="display: inline-block; width: 20px;height: 20px;padding: 3px;" type="checkbox"
+                                id="acceptTerms" name="acceptTerms" required>
+                            <label for="acceptTerms"
+                                style="display: inline-block; padding-left: 10px; font-style: italic;">
+                                Tôi chấp nhận điều khoản đăng ký.
+                            </label>
+                        </div>
+                        <button style="display: inline-block;" type="submit" name="btn-reg" id="reg">Đăng ký</button>
+                    </form>
+                    <p>Bạn đã có tài khoản? <a id="login-btn">Đăng nhập</a></p>
+                </div>
+            </div>
+            <div class="login-form" id="login-form">
+                <h2>Đăng nhập</h2>
+                <form id="loginForm" action="reg.php" method="POST">
+                    <div class="inputItem">
+                        <label for="username">Username:</label>
+                        <input type="text" id="user" name="user" required>
+                    </div>
+                    <div class="inputItem">
+                        <label for="pass">Mật khẩu:</label>
+                        <input type="password" id="pass" name="pass" required>
+                    </div>
+                    <button style="display: inline-block;" type="submit" name="btn-reg" id="login">Đăng nhập</button>
+                </form>
+                <p>Bạn chưa có tài khoản? <a id="signup-btn">Đăng ký</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>
